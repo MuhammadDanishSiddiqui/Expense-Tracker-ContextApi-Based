@@ -1,38 +1,143 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header{
+  background-color: blue;
+  color:white;
+  text-align:center;
+  padding: 10px 0px;
+  width: 100%
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.inc_exc_wrapper{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.inc_exp{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+  border:1px solid black;
+  padding: 20px;
+ 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.inc_exp p{
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.inc{
+  color:green
+}
+.exc{
+  color:red
+}
+
+.balance{
+  margin-bottom: 10px
+}
+
+button{
+  padding: 5px 10px;
+  margin: 5px !important
+}
+
+.edit_btn{
+  background-color: blue;
+  color:white
+}
+
+.delete_btn{
+background-color: red;
+color:white
+}
+
+.transaction_wrapper{
+  border:1px solid black;
+  overflow: auto;
+  width: 100%
+}
+
+.transactions_header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: blue;
+  color:white;
+  padding: 15px
+}
+
+.transactions_header div{
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center
+}
+
+.transactions_header div h5{font-size: 20px;cursor: pointer;}
+
+table{
+  width:100%;
+  border-collapse: collapse
+
+}
+
+tr,td,th{
+  text-align: center;
+  border: 1px solid black !important;
+  padding: 10px;
+  font-size: 20px
+}
+
+@media screen and (max-width:650px){
+  .transactions_header div{
+    width: 50%;} 
+    tr,td,th{
+      padding: 3px;
+      font-size:15px
+    }  
+    .balance h3{
+      font-size:20px
+    }
+    .inc_exp p{
+     font-size: 17px;
+    } 
+    .inc_exp h4{
+      font-size: 22px;
+     }
+     .header h1{font-size: 25px} 
+     .inc_exp{width:70%}          
+}
+
+@media screen and (max-width:480px){
+  .transactions_header{
+    flex-direction: column
   }
-  to {
-    transform: rotate(360deg);
+  .transactions_header div{
+    width: 80%;
+    margin-top: 10px
   }
+
+  .inc_exp{width:100%} 
+}
+
+.input_filed{
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
+.input_filed input{
+  flex-basis: 70%
 }
